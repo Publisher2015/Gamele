@@ -1,10 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wordle Pro Hub</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .app-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .app-tile {
+      width: 140px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+      text-decoration: none;
+      color: white;
+      transition: transform 0.2s ease, background 0.2s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .app-tile:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 10px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 2px;
+    }
+
+    .icon div {
+      background: #fbbf24;
+      border-radius: 2px;
+    }
+
+    .icon div:nth-child(odd) {
+      background: #22c55e;
+    }
+
+    .label {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .sub {
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Hello, I'm Publisher2015!</h1>
-    <p>My GitHub Pages site is live.</p>
+  <div class="container">
+    <h1>Game Hub</h1>
+
+    <div class="app-grid">
+      <a class="app-tile" href="https://publisher2015.github.io/Wordle-Pro-/" target="_blank">
+        
+        <div class="icon">
+          <!-- simple “scrabble-style” block icon -->
+          <div></div><div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div><div></div>
+        </div>
+
+        <div class="label">Wordle Pro</div>
+        <div class="sub">Play now</div>
+      </a>
+    </div>
+  </div>
 </body>
 </html>
