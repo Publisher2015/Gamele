@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wordle Pro Hub</title>
+  <title>Game Hub</title>
 
   <style>
     body {
@@ -31,10 +31,11 @@
       display: flex;
       justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .app-tile {
-      width: 140px;
+      width: 150px;
       padding: 20px;
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.15);
@@ -56,18 +57,39 @@
       height: 70px;
       margin: 0 auto 10px;
       display: grid;
+      gap: 3px;
+    }
+
+    /* Wordle/Scrabble-style icon */
+    .wordle-icon {
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(5, 1fr);
-      gap: 2px;
     }
 
-    .icon div {
-      background: #fbbf24;
-      border-radius: 2px;
-    }
-
-    .icon div:nth-child(odd) {
+    .wordle-icon div {
       background: #22c55e;
+      border-radius: 3px;
+    }
+
+    .wordle-icon div:nth-child(even) {
+      background: #fbbf24;
+    }
+
+    /* Calculator icon */
+    .calc-icon {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      padding: 5px;
+    }
+
+    .calc-icon div {
+      background: rgba(255,255,255,0.85);
+      border-radius: 4px;
+    }
+
+    .calc-icon .screen {
+      grid-column: 1 / 4;
+      background: #94a3b8;
     }
 
     .label {
@@ -88,20 +110,32 @@
     <h1>Game Hub</h1>
 
     <div class="app-grid">
+
+      <!-- Wordle Pro -->
       <a class="app-tile" href="https://publisher2015.github.io/Wordle-Pro-/" target="_blank">
-        
-        <div class="icon">
-          <!-- simple “scrabble-style” block icon -->
+        <div class="icon wordle-icon">
           <div></div><div></div><div></div><div></div><div></div>
           <div></div><div></div><div></div><div></div><div></div>
           <div></div><div></div><div></div><div></div><div></div>
           <div></div><div></div><div></div><div></div><div></div>
           <div></div><div></div><div></div><div></div><div></div>
         </div>
-
         <div class="label">Wordle Pro</div>
         <div class="sub">Play now</div>
       </a>
+
+      <!-- Calculator Pro -->
+      <a class="app-tile" href="https://publisher2015.github.io/Calculator-Pro/" target="_blank">
+        <div class="icon calc-icon">
+          <div class="screen"></div>
+          <div></div><div></div><div></div>
+          <div></div><div></div><div></div>
+          <div></div><div></div><div></div>
+        </div>
+        <div class="label">Calculator Pro</div>
+        <div class="sub">Open calculator</div>
+      </a>
+
     </div>
   </div>
 </body>
